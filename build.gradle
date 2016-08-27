@@ -8,7 +8,7 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Required for Kotlin integration
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Für Kotlin integration
 	}
 }
 
@@ -31,9 +31,9 @@ dependencies {
 	compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile "com.h2database:h2"
 	compile "org.springframework.boot:spring-boot-starter-web"
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version" // Required for Kotlin integration
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version" // Für Kotlin integration
 }
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }

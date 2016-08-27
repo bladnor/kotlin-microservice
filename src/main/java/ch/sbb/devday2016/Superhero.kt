@@ -6,10 +6,27 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-class Superhero(
+data class Superhero(
         val name: String = "",
-
-        @Id @GeneratedValue(strategy = javax.persistence.GenerationType.AUTO)
+        val superpower: String = "",
+        @Id @GeneratedValue(strategy = GenerationType.AUTO)
         var id: Long = 0
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//{
+//     private constructor() : this("","")
+//}
 

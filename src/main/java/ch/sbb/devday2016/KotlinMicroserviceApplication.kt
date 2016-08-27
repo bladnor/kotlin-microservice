@@ -1,7 +1,5 @@
 package ch.sbb.devday2016
 
-import ch.sbb.devday2016.Superhero
-import ch.sbb.devday2016.SuperheroRepository
 import com.fasterxml.jackson.module.kotlin.KotlinModule
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
@@ -16,9 +14,11 @@ open class KotlinMicroserviceApplication {
 
     @Bean
     open fun init(repository: SuperheroRepository) = CommandLineRunner {
-        repository.save(Superhero("elektra"))
-        repository.save(Superhero("hulk"))
-        repository.save(Superhero("superman"))
+        repository.save(Superhero("elektra","combat"))
+        repository.save(Superhero("loki","shape-shifting"))
+        repository.save(Superhero("superman","flight"))
+        repository.save(Superhero("batmann"))
+        repository.save(Superhero())
     }
 }
 
